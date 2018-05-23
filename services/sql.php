@@ -1,14 +1,15 @@
 <?php
 
 
+
 $bdd = new PDO('mysql:host=localhost;dbname=mercadolivre;charset=utf8', 'root', 'troiswa' );
-$bdd->exec('SET NAMES UTF8');
+// $bdd->exec('SET NAMES UTF8');
 
 
 if (isset($_GET['word'])) {
 	$word = $_GET['word'];
 
-	$sql = "SELECT * FROM product WHERE name OR description LIKE '%$word%'";
+	$sql = "SELECT * FROM product WHERE name LIKE '%$word%'";
 	
 } else {
 	$sql = 'SELECT * FROM product';
@@ -19,15 +20,33 @@ $reponse = $bdd->query($sql);
 while ( $donnees = $reponse->fetch()) {	
 	$list[] = $donnees;
 }
-	
 
 
 
-$bdd = new PDO('mysql:host=localhost;dbname=user;charset=utf8', 'root', 'troiswa' );
-$sqluser = 'SELECT * FROM product';
+
 
 
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

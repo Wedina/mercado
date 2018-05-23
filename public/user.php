@@ -1,20 +1,23 @@
 <?php
+session_start();
+
+include '../services/sql.php';
 include '../services/tools.php';
 include 'header.php';
-include '../services/sql.php';
 ?>
 
-<h3>Veuillez remplir le formulaire</h3>
+<h2>Me connecter</h2>
 
-<form action="" method="post">
-	<label>ID</label>
-	<input type="text" name="id">
+
+
+<form class="form" action="register.php" method="POST">
+	
 	<label>mail.@</label>
 	<input type="mail" name="mail">
-	<label>Prenon</label>
-	<input type="text" name="firstname">
-	<label>Non</label>
-	<input type="text" name="lastname">
+	<label>mot de passe</label>
+	<input type="password" name="password">
+	<button>valider</button>
+	
 </form>
 
 

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../services/tools.php';
 include 'header.php';
 include '../services/sql.php';
@@ -6,6 +7,7 @@ include '../services/sql.php';
 
 ?>
 	<h1>Benvido no mercado livre</h1>
+
 	<section>
 		<article>
 			<form action="index.php" method="get">

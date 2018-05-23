@@ -10,7 +10,7 @@ html{
 body{
 	font-size: 1.6rem;
 	/*background-image: url("http://www.litury.com/wp-content/uploads/2017/12/fond-d-ecran-hd-bresil.jpg");*/
-	background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    background-image: linear-gradient(to bottom, #dad9d8, #e3ddd5, #ece0d1, #f3e4cd, #f9e9c9);
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin: auto;
@@ -30,7 +30,7 @@ nav a{
 
 
 nav{
-	background-color: rgba(15, 137, 179, 0.5);
+	background-color: rgba(250, 137, 179, 0.5);
 	margin: 5rem auto;
 	display: flex;
 	flex-wrap: nowrap;
@@ -66,4 +66,12 @@ label{
 
 h3{
 	color: #00bf72;
+}
+
+.form{
+	/*border: 1px groove yellow;*/
+	padding: 4rem;
+	margin: auto 50rem;
+	background-color: rgba(250,250,250,0.3);
+	box-shadow: 3px 5px 15px black;
 }

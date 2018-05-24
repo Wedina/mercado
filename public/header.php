@@ -9,11 +9,7 @@ if (isset($_SESSION['iduser'])){
     $statement = $bdd1->prepare($sql);
 	$statement->execute();
 	$user = $statement->fetch(\PDO::FETCH_ASSOC);
-
-	
-
 }else {
-	echo "hors session";
 
 }
 
@@ -23,29 +19,35 @@ if (isset($_SESSION['iduser'])){
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Indie+Flower" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>Banana STORE</title>
 </head>
 <body>
 	<header>
-		<p>
+		<p id="user">
 		<?php
 		 if ($user == null){
 			echo "hors session";
 		} else {
 			echo  "Bonjour " . $user['firstname'] . '<br>' . '<img src="'. $user["photo"].'"/>';
 		}
-		 ?>
-		
-			
+		 ?>	
 		</p>
+		<div class="clear"></div>
 		<nav>
 			<a href="index.php">accueil</a>
-			<a href="#">produits</a>
-			<a href="#">contact us</a>
-			<a href="#">back</a>
+			<a href="produit.php">produits</a>
 			<a href="user.php">login</a>
-			<a href="destroy.php">deconnecter</a>
+			
+			<?php
+
+
+
+			?>
+			<a href="panier.php">Mon panier<?php echo " nb produits"; ?></a>
+			<a id="deconnection" href="destroy.php">deconnecter</a>
+			
 		</nav>
 	</header>
 	<main>

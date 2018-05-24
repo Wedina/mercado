@@ -19,7 +19,6 @@ include '../services/sql.php';
 	<section>
 		<article>
 			<h3>Loja azul</h3>
-			
 			<table>
 				<tr class="tr">
 					<td>Nom</td>
@@ -33,7 +32,7 @@ include '../services/sql.php';
 					<td><?= ($key[1]) ?></td>
 					<td><?= ($key[2]) ?> £</td>
 					<td><?= ($key[3]) ?></td>
-					<td><img src="<?= $key[4] ?>"></td>
+					<td><a href="produit.php?id=<?php echo $key['id'] ?>"><img class="pic" src="<?= $key[4] ?>"></a></td>
 					<td><?= ($key[5]) ?></td>
 				</tr>
 			<?php endforeach; ?>
@@ -55,7 +54,6 @@ include '../services/sql.php';
 			</form>
 		</article>	
 	</section>
-
 <?php
 include 'footer.php';
 
